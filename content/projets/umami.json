@@ -1,11 +1,33 @@
 {
-    "titre":  "Umami",
-    "soustitre":  "Contenu à venir",
-    "categorie":  "identite",
-    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
-    "paragraphe2":  "",
-    "galerie":  [
-
-                ],
-    "ordre":  20
+  "titre": "IDENTITÉ VISUELLE D’UN RESTAURANT",
+  "soustitre": "Fusion street food & culture drift",
+  "categorie": "identite",
+  "paragraphe1": "Création de l’identité visuelle d’un restaurant de street food japonaise, du logo aux supports de communication. Pensée autour du nom Umami et de l’univers du drift, le projet mêle références au Japon, énergie grunge et culture urbaine dans une identité vive, ludique et immersive.",
+  "paragraphe2": "",
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/umami1.png",
+      "alt": "Mockup"
+    },
+    {
+      "type": "image",
+      "taille": "grande",
+      "image": "/img/uploads/umami2.png",
+      "punaise": "Plan de travail 9.png",
+      "alt": "Stickers"
+    },
+    {
+      "type": "duo",
+      "taille": "moyenne",
+      "image": "/img/uploads/umami4.png",
+      "alt": "Menu",
+      "alt2": "Menu",
+      "image2": "/img/uploads/umami3.png",
+      "punaise": "Plan de travail 2.png"
+    }
+  ],
+  "ordre": -1,
+  "titre_accueil": "Umami"
 }
