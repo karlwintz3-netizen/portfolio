@@ -1,11 +1,25 @@
 {
-    "titre":  "Pan",
-    "soustitre":  "Contenu à venir",
-    "categorie":  "identite",
-    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
-    "paragraphe2":  "",
-    "galerie":  [
-
-                ],
-    "ordre":  30
+  "titre": "CRÉATION D’UNE MARQUE FROMAGÈRE",
+  "soustitre": "Marque engagée & savoir-faire artisanal",
+  "categorie": "identite",
+  "paragraphe1": "Création d’une marque fromagère engagée valorisant des fromages AOP, locaux et artisanaux. Pensé pour soutenir les jeunes producteurs, le projet Pan développe un univers à la fois authentique, accessible et contemporain, entre savoir-faire traditionnel, engagement durable et identité de marque forte.",
+  "paragraphe2": "Développement d’une identité visuelle complète mêlant logo typographique, mascotte et supports de communication pour donner à la marque un langage graphique accessible, chaleureux et distinctif",
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/pan4.png",
+      "alt": "Mockup"
+    },
+    {
+      "type": "duo",
+      "taille": "moyenne",
+      "image": "/img/uploads/pan2.png",
+      "alt": "croquis",
+      "alt2": "croquis",
+      "image2": "/img/uploads/pan3.png"
+    }
+  ],
+  "ordre": 3,
+  "titre_accueil": "Pan"
 }
