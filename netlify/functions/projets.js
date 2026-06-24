@@ -21,9 +21,11 @@ exports.handler = async function () {
       );
       var slug = nomFichier.replace(/\.json$/, "");
 
+      var titreAccueil = contenu.titre_accueil || contenu.titre || slug;
+
       return {
         slug: slug,
-        titre: (contenu.titre || slug).split("\n").join(" "),
+        titre: titreAccueil.split("\n").join(" "),
         categorie: contenu.categorie || "",
       };
     });

@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
@@ -10,11 +12,12 @@ collections:
     label: "Projets"
     folder: "content/projets"
     create: true
-    slug: "{{slug}}"
+    identifier_field: titre
     extension: "json"
     format: "json"
     fields:
-      - { label: "Titre", name: "titre", widget: "string", hint: "Utilise une nouvelle ligne pour revenir à la ligne dans le titre." }
+      - { label: "Titre (sur la page du projet)", name: "titre", widget: "text", hint: "Utilise une nouvelle ligne pour revenir à la ligne dans le titre." }
+      - { label: "Titre sur le post-it (page d'accueil)", name: "titre_accueil", widget: "string", required: false, hint: "Laisse vide pour reprendre le titre ci-dessus." }
       - { label: "Sous-titre", name: "soustitre", widget: "string" }
       - label: "Catégorie"
         name: "categorie"

@@ -311,86 +311,58 @@ button:focus-visible {
 
 /* Grands écrans : la grappe sort réellement à droite du post-it, sans le
    chevaucher. Le seuil (1300px) est calculé pour garantir qu'il reste assez
-   de liège visible à droite de la grille pour accueillir la grappe (plus
-   grande désormais), quelle que soit la largeur de la fenêtre au-delà de ce
-   seuil. */
+   de liège visible à droite de la grille pour l'accueillir, quelle que soit
+   la largeur de la fenêtre au-delà de ce seuil.
+   On utilise un flex-wrap (plutôt que des coordonnées fixes par item) pour
+   que la grappe s'adapte automatiquement à n'importe quel nombre de
+   projets, sans jamais faire chevaucher les notes entre elles ni déborder
+   sur les post-it voisins : elle s'agrandit simplement vers le bas. */
 @media (min-width: 1300px) {
   .sous-postits {
     position: absolute;
     top: 4px;
     left: 100%;
     margin-left: 14px;
-    width: 198px;
-    height: 198px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.6rem;
     z-index: 3;
   }
 
-  .sous-postits li {
-    position: absolute;
-  }
-
   .sous-postit {
-    width: 92px;
+    width: 88px;
     aspect-ratio: 1 / 1;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
-  .sous-postits li:nth-child(1) {
-    top: -8px;
-    left: 0;
-    transform: rotate(-8deg);
+  .sous-postits li:nth-child(odd) .sous-postit {
+    transform: rotate(-7deg);
   }
 
-  .sous-postits li:nth-child(2) {
-    top: 6px;
-    left: 102px;
-    transform: rotate(11deg);
+  .sous-postits li:nth-child(even) .sous-postit {
+    transform: rotate(8deg);
   }
 
-  .sous-postits li:nth-child(3) {
-    top: 96px;
-    left: 8px;
-    transform: rotate(5deg);
+  .sous-postits li:nth-child(3n) .sous-postit {
+    transform: rotate(4deg) translateY(6px);
   }
 
-  .sous-postits li:nth-child(4) {
-    top: 104px;
-    left: 100px;
-    transform: rotate(-9deg);
-  }
-
-  .sous-postits li:hover,
-  .sous-postits li:focus-within {
+  .sous-postits li:hover .sous-postit,
+  .sous-postits li:focus-within .sous-postit {
+    transform: scale(1.08) !important;
     z-index: 6;
   }
 
   /* Variante miroir : la grappe sort à gauche du post-it (ex. "Édition")
-     au lieu de la droite. Mêmes décalages, juste inversés via "right". */
+     au lieu de la droite. */
   .sous-postits--gauche {
     left: auto;
     right: 100%;
     margin-left: 0;
     margin-right: 14px;
-  }
-
-  .sous-postits--gauche li:nth-child(1) {
-    left: auto;
-    right: 0;
-  }
-
-  .sous-postits--gauche li:nth-child(2) {
-    left: auto;
-    right: 102px;
-  }
-
-  .sous-postits--gauche li:nth-child(3) {
-    left: auto;
-    right: 8px;
-  }
-
-  .sous-postits--gauche li:nth-child(4) {
-    left: auto;
-    right: 100px;
+    justify-content: flex-end;
   }
 }
 
