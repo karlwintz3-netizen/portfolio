@@ -27,7 +27,12 @@ exports.handler = async function () {
         slug: slug,
         titre: titreAccueil.split("\n").join(" "),
         categorie: contenu.categorie || "",
+        ordre: typeof contenu.ordre === "number" ? contenu.ordre : 10,
       };
+    });
+
+    projets.sort(function (a, b) {
+      return a.ordre - b.ordre;
     });
   } catch (erreur) {
     return {

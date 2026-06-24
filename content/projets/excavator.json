@@ -1,8 +1,11 @@
-{
-  "titre": "Excavator",
-  "soustitre": "Contenu à venir",
-  "categorie": "identite",
-  "paragraphe1": "Ce projet est en cours de rédaction. Modifie ce texte depuis l'éditeur (/admin) pour le compléter.",
-  "paragraphe2": "",
-  "galerie": []
+﻿{
+    "titre":  "Excavator",
+    "soustitre":  "Contenu à venir",
+    "categorie":  "identite",
+    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
+    "paragraphe2":  "",
+    "galerie":  [
+
+                ],
+    "ordre":  40
 }

@@ -1,46 +1,47 @@
-{
-  "titre": "Refonte logo positionnement premium ",
-  "soustitre": "Moderniser l'image sans perdre les repères de marque",
-  "categorie": "identite",
-  "paragraphe1": "La mission consiste à revisiter et réinventer le logo actuel de Goudale pour lui apporter une touche premium tout en préservant les éléments distinctifs qui font l'identité de marque Goudale.",
-  "paragraphe2": "En complément, mon client attendait la création de mockups illustrant cette nouvelle identité visuelle dans différents contextes et supports : affiches, sites web, packagings et bien d'autres. Ces présentations avaient pour objectif de démontrer comment le logo repensé s'intègre harmonieusement dans chaque application.",
-  "galerie": [
-    {
-      "type": "duo",
-      "image": "/img/goudale/ancien logo.png",
-      "alt": "Ancien logo de la marque « la Goudale »",
-      "image2": "/img/goudale/nouveau logo.png",
-      "alt2": "Nouveau logo « Goudale Brasserie », version premium",
-      "taille": "moyenne",
-      "punaise": "Plan de travail 2.png"
-    },
-    {
-      "type": "image",
-      "image": "/img/goudale/mockup bouteille.png",
-      "alt": "Mockup du nouveau logo appliqué sur des bouteilles de bière Goudale",
-      "taille": "moyenne",
-      "punaise": "Plan de travail 2.png"
-    },
-    {
-      "type": "image",
-      "image": "/img/goudale/mockup affiche.png",
-      "alt": "Mockup du logo intégré sur une borne publicitaire urbaine",
-      "taille": "moyenne",
-      "punaise": "Plan de travail 2.png"
-    },
-    {
-      "type": "image",
-      "image": "/img/goudale/croquis-1.png",
-      "alt": "Croquis préparatoire : recherches typographiques de la lettre G",
-      "taille": "moyenne",
-      "punaise": "Plan de travail 2.png"
-    },
-    {
-      "type": "image",
-      "image": "/img/goudale/croquis-2.png",
-      "alt": "Croquis préparatoire : recherches autour du monogramme et de l'histoire de la marque",
-      "taille": "moyenne",
-      "punaise": "Plan de travail 2.png"
-    }
-  ]
+﻿{
+    "titre":  "Refonte logo positionnement premium ",
+    "soustitre":  "Moderniser l\u0027image sans perdre les repères de marque",
+    "categorie":  "identite",
+    "paragraphe1":  "La mission consiste à revisiter et réinventer le logo actuel de Goudale pour lui apporter une touche premium tout en préservant les éléments distinctifs qui font l\u0027identité de marque Goudale.",
+    "paragraphe2":  "En complément, mon client attendait la création de mockups illustrant cette nouvelle identité visuelle dans différents contextes et supports : affiches, sites web, packagings et bien d\u0027autres. Ces présentations avaient pour objectif de démontrer comment le logo repensé s\u0027intègre harmonieusement dans chaque application.",
+    "galerie":  [
+                    {
+                        "type":  "duo",
+                        "image":  "/img/goudale/ancien logo.png",
+                        "alt":  "Ancien logo de la marque « la Goudale »",
+                        "image2":  "/img/goudale/nouveau logo.png",
+                        "alt2":  "Nouveau logo « Goudale Brasserie », version premium",
+                        "taille":  "moyenne",
+                        "punaise":  "Plan de travail 2.png"
+                    },
+                    {
+                        "type":  "image",
+                        "image":  "/img/goudale/mockup bouteille.png",
+                        "alt":  "Mockup du nouveau logo appliqué sur des bouteilles de bière Goudale",
+                        "taille":  "moyenne",
+                        "punaise":  "Plan de travail 2.png"
+                    },
+                    {
+                        "type":  "image",
+                        "image":  "/img/goudale/mockup affiche.png",
+                        "alt":  "Mockup du logo intégré sur une borne publicitaire urbaine",
+                        "taille":  "moyenne",
+                        "punaise":  "Plan de travail 2.png"
+                    },
+                    {
+                        "type":  "image",
+                        "image":  "/img/goudale/croquis-1.png",
+                        "alt":  "Croquis préparatoire : recherches typographiques de la lettre G",
+                        "taille":  "moyenne",
+                        "punaise":  "Plan de travail 2.png"
+                    },
+                    {
+                        "type":  "image",
+                        "image":  "/img/goudale/croquis-2.png",
+                        "alt":  "Croquis préparatoire : recherches autour du monogramme et de l\u0027histoire de la marque",
+                        "taille":  "moyenne",
+                        "punaise":  "Plan de travail 2.png"
+                    }
+                ],
+    "ordre":  10
 }

@@ -323,8 +323,9 @@ button:focus-visible {
     top: 4px;
     left: 100%;
     margin-left: 14px;
-    width: 200px;
+    height: 290px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
     gap: 0.6rem;
@@ -362,7 +363,9 @@ button:focus-visible {
     right: 100%;
     margin-left: 0;
     margin-right: 14px;
-    justify-content: flex-end;
+    /* Les nouvelles colonnes doivent s'éloigner du post-it (vers la
+       gauche), pas s'en approcher : on inverse le sens d'empilement. */
+    flex-wrap: wrap-reverse;
   }
 }
 

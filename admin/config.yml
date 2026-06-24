@@ -15,6 +15,9 @@ collections:
     identifier_field: titre
     extension: "json"
     format: "json"
+    view_groups:
+      - { label: "Par catégorie", field: categorie }
+    sortable_fields: ["categorie", "ordre", "titre"]
     fields:
       - { label: "Titre (sur la page du projet)", name: "titre", widget: "text", hint: "Utilise une nouvelle ligne pour revenir à la ligne dans le titre." }
       - { label: "Titre sur le post-it (page d'accueil)", name: "titre_accueil", widget: "string", required: false, hint: "Laisse vide pour reprendre le titre ci-dessus." }
@@ -26,6 +29,7 @@ collections:
           - { label: "Identité de marque", value: "identite" }
           - { label: "Édition", value: "edition" }
           - { label: "Typographie", value: "typographie" }
+      - { label: "Ordre d'affichage sur la home", name: "ordre", widget: "number", default: 10, hint: "Les post-it les plus petits s'affichent en premier dans leur catégorie." }
       - { label: "Premier paragraphe", name: "paragraphe1", widget: "text" }
       - { label: "Deuxième paragraphe", name: "paragraphe2", widget: "text", required: false }
       - label: "Galerie"
