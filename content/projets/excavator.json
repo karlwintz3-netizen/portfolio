@@ -1,11 +1,23 @@
 {
-    "titre":  "Excavator",
-    "soustitre":  "Contenu à venir",
-    "categorie":  "identite",
-    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
-    "paragraphe2":  "",
-    "galerie":  [
-
-                ],
-    "ordre":  40
+  "titre": "PLATEFORME E-COMMERCE",
+  "soustitre": "Plateforme de vente de jeux rétro",
+  "categorie": "identite",
+  "paragraphe1": "L’identité d’Excavator détourne les codes visuels du chantier pour évoquer l’exploration et la découverte de pépites dans l’univers du jeu vidéo rétro. Le noir et le jaune, associés à la signalétique du BTP, renforcent une image brute, lisible et immédiatement identifiable",
+  "paragraphe2": "https://mjm00.fr/dg25wintz/shop/",
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/excavator1.png",
+      "alt": "Mockup pc"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/excavator2.png",
+      "alt": "mockup téléphone"
+    }
+  ],
+  "ordre": 4,
+  "titre_accueil": "Rétro"
 }
