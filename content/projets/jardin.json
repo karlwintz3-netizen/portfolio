@@ -7,8 +7,26 @@
   "galerie": [
     {
       "type": "image",
+      "taille": "grande",
+      "image": "/img/uploads/jardin3.png",
+      "alt": "mockup affiche"
+    },
+    {
+      "type": "image",
       "taille": "moyenne",
-      "image": "/img/uploads/mockup.png",
+      "image": "/img/uploads/jardin2.png",
+      "alt": "mockup deux affiches"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/jardin1.png",
+      "alt": "regle affiche"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/jardin4.png",
       "alt": "mockup affiche"
     }
   ],
