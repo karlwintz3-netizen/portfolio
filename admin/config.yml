@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "img"
-public_folder: "/img"
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
 
 collections:
   - name: "projets"
@@ -11,15 +11,54 @@ collections:
     folder: "content/projets"
     create: true
     slug: "{{slug}}"
+    extension: "json"
+    format: "json"
     fields:
       - { label: "Titre", name: "titre", widget: "string", hint: "Utilise une nouvelle ligne pour revenir à la ligne dans le titre." }
       - { label: "Sous-titre", name: "soustitre", widget: "string" }
+      - label: "Catégorie"
+        name: "categorie"
+        widget: "select"
+        options:
+          - { label: "Identité de marque", value: "identite" }
+          - { label: "Édition", value: "edition" }
+          - { label: "Typographie", value: "typographie" }
       - { label: "Premier paragraphe", name: "paragraphe1", widget: "text" }
       - { label: "Deuxième paragraphe", name: "paragraphe2", widget: "text", required: false }
       - label: "Galerie"
         name: "galerie"
         widget: "list"
         required: false
+        hint: "Glisse-dépose les éléments pour changer leur ordre."
         fields:
+          - label: "Type de visuel"
+            name: "type"
+            widget: "select"
+            default: "image"
+            options:
+              - { label: "Une image", value: "image" }
+              - { label: "Deux images sur un même papier (ex: avant/après)", value: "duo" }
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Texte alternatif", name: "alt", widget: "string" }
+          - { label: "Deuxième image (uniquement si « Deux images »)", name: "image2", widget: "image", required: false }
+          - { label: "Texte alternatif (deuxième image)", name: "alt2", widget: "string", required: false }
+          - label: "Punaise"
+            name: "punaise"
+            widget: "select"
+            required: false
+            hint: "Laisse vide pour une punaise choisie automatiquement."
+            options:
+              - { label: "Classique", value: "Plan de travail 2.png" }
+              - { label: "Inclinée", value: "Plan de travail 4.png" }
+              - { label: "Foncée", value: "Plan de travail 7.png" }
+              - { label: "Renversée", value: "Plan de travail 14.png" }
+              - { label: "Ronde", value: "Plan de travail 11.png" }
+              - { label: "Verticale", value: "Plan de travail 9.png" }
+          - label: "Taille de l'image"
+            name: "taille"
+            widget: "select"
+            default: "moyenne"
+            options:
+              - { label: "Petite", value: "petite" }
+              - { label: "Moyenne", value: "moyenne" }
+              - { label: "Grande", value: "grande" }

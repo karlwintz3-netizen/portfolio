@@ -281,6 +281,23 @@ button:focus-visible {
   transition: transform 0.2s ease;
 }
 
+/* Couleur des petits post-it assortie à celle du post-it parent. */
+.sous-postit--bleu {
+  background-image: url("../img/post-it-titre/post-it-3.png");
+}
+
+.sous-postit--rose {
+  background-image: url("../img/post-it-titre/post-it-1.png");
+}
+
+.sous-postit--vert {
+  background-image: url("../img/post-it-titre/post-it-2.png");
+}
+
+.sous-postit--violet {
+  background-image: url("../img/post-it-titre/post-it-4.png");
+}
+
 .sous-postit:hover,
 .sous-postit:focus-visible {
   transform: scale(1.08) !important;
@@ -534,6 +551,10 @@ button:focus-visible {
     width: 44%;
   }
 
+  .galerie__item--duo {
+    width: 92%;
+  }
+
   .galerie__item:nth-child(1) {
     transform: rotate(-2deg);
   }
@@ -631,6 +652,52 @@ button:focus-visible {
   object-fit: contain;
   margin: 0 auto;
   filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
+}
+
+.galerie__image--petite {
+  max-height: 130px;
+}
+
+.galerie__image--grande {
+  max-height: 260px;
+}
+
+/* Deux images réunies sur un même papier (ex: logo avant/après). */
+.galerie__duo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 2.5rem);
+  aspect-ratio: 2.2 / 1;
+  padding: 1rem clamp(1rem, 5vw, 2.5rem);
+}
+
+.galerie__duo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../img/papier-texte/papier-1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
+}
+
+.galerie__duo img {
+  max-height: 66%;
+  width: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+.galerie__duo.galerie__image--petite {
+  aspect-ratio: 2.4 / 1;
+}
+
+.galerie__duo.galerie__image--grande {
+  aspect-ratio: 2 / 1;
 }
 
 /* --- Texte accessible visible uniquement par les lecteurs d'écran --- */

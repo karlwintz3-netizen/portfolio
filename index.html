@@ -32,20 +32,7 @@
             <span class="postit__icone" aria-hidden="true">▾</span>
           </button>
 
-          <ul id="sous-rubriques-identite" class="sous-postits" hidden>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=umami">Umami</a>
-            </li>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=pan">Pan</a>
-            </li>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=refonte-logo">Refonte Logo</a>
-            </li>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=excavator" aria-label="Excavator">Excava<br />tor</a>
-            </li>
-          </ul>
+          <ul id="sous-rubriques-identite" class="sous-postits" data-categorie="identite" hidden></ul>
         </li>
         <li class="nav-postits__item">
           <button
@@ -60,17 +47,7 @@
             <span class="postit__icone" aria-hidden="true">▾</span>
           </button>
 
-          <ul id="sous-rubriques-edition" class="sous-postits sous-postits--gauche" hidden>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=peet">Peet</a>
-            </li>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=t2g">T2G</a>
-            </li>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=jardin">Jardin</a>
-            </li>
-          </ul>
+          <ul id="sous-rubriques-edition" class="sous-postits sous-postits--gauche" data-categorie="edition" hidden></ul>
         </li>
         <li class="nav-postits__item">
           <button
@@ -85,20 +62,14 @@
             <span class="postit__icone" aria-hidden="true">▾</span>
           </button>
 
-          <ul id="sous-rubriques-typo" class="sous-postits" hidden>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=fat-boy">Fat boy</a>
-            </li>
-            <li>
-              <a class="sous-postit" href="projet.html?projet=typo-2">À venir</a>
-            </li>
-          </ul>
+          <ul id="sous-rubriques-typo" class="sous-postits" data-categorie="typographie" hidden></ul>
         </li>
       </ul>
     </nav>
   </main>
 
   <script src="js/script.js"></script>
+  <script src="js/accueil-projets.js"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function (user) {
