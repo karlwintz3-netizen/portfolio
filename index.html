@@ -6,6 +6,7 @@
   <title>Portfolio — Accueil</title>
   <meta name="description" content="Portfolio de designer graphique : identité de marque, édition, typographie." />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
@@ -60,5 +61,16 @@
   </main>
 
   <script src="js/script.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
