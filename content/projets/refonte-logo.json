@@ -6,6 +6,15 @@
   "paragraphe2": "En complément, mon client attendait la création de mockups illustrant cette nouvelle identité visuelle dans différents contextes et supports : affiches, sites web, packagings et bien d'autres. Ces présentations avaient pour objectif de démontrer comment le logo repensé s'intègre harmonieusement dans chaque application.",
   "galerie": [
     {
+      "type": "duo",
+      "image": "/img/goudale/ancien logo.png",
+      "alt": "Ancien logo de la marque « la Goudale »",
+      "image2": "/img/goudale/nouveau logo.png",
+      "alt2": "Nouveau logo « Goudale Brasserie », version premium",
+      "taille": "moyenne",
+      "punaise": "Plan de travail 2.png"
+    },
+    {
       "type": "image",
       "image": "/img/goudale/mockup bouteille.png",
       "alt": "Mockup du nouveau logo appliqué sur des bouteilles de bière Goudale",
@@ -23,15 +32,6 @@
       "type": "image",
       "image": "/img/goudale/croquis-1.png",
       "alt": "Croquis préparatoire : recherches typographiques de la lettre G",
-      "taille": "moyenne",
-      "punaise": "Plan de travail 2.png"
-    },
-    {
-      "type": "duo",
-      "image": "/img/goudale/ancien logo.png",
-      "alt": "Ancien logo de la marque « la Goudale »",
-      "image2": "/img/goudale/nouveau logo.png",
-      "alt2": "Nouveau logo « Goudale Brasserie », version premium",
       "taille": "moyenne",
       "punaise": "Plan de travail 2.png"
     },
