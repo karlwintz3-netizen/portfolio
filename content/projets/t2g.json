@@ -1,11 +1,17 @@
 {
-    "titre":  "T2G",
-    "soustitre":  "Contenu à venir",
-    "categorie":  "edition",
-    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
-    "paragraphe2":  "",
-    "galerie":  [
-
-                ],
-    "ordre":  30
+  "titre": "PROGRAMME ÉDITORIAL",
+  "soustitre": "Programme du Théâtre de Gennevilliers",
+  "categorie": "edition",
+  "paragraphe1": "Développement d’un programme éditorial pour le Théâtre de Gennevilliers, pensé comme un support à la fois artistique, lisible et impactant. Le projet associe couleurs vives, traitement photo monochrome et typographie expressive afin de transmettre l’énergie de la saison. La couverture argentée en relief prolonge\ncette intention en donnant au programme une dimension visuelle et tactile forte.",
+  "paragraphe2": "",
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/t2g1.png",
+      "alt": "mockup"
+    }
+  ],
+  "ordre": 2,
+  "titre_accueil": "T2G"
 }
