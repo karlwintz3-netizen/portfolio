@@ -16,6 +16,12 @@
       "taille": "moyenne",
       "image": "/img/uploads/peet4.png",
       "alt": "mockup vinyle"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/peet3.png",
+      "alt": "Affiche"
     }
   ],
   "ordre": 2,
