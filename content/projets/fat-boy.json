@@ -1,11 +1,35 @@
 {
-    "titre":  "Fat boy",
-    "soustitre":  "Contenu à venir",
-    "categorie":  "typographie",
-    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
-    "paragraphe2":  "",
-    "galerie":  [
-
-                ],
-    "ordre":  20
+  "titre": "CRÉATION D’UNE POLICE",
+  "soustitre": "Création d’une police de titrage",
+  "categorie": "typographie",
+  "paragraphe1": "Création d’une police de titrage construite sur une grille, pensée pour être lisible, singulière et visuellement impactante. Ses formes rondes, grasses et condensées lui donnent une forte présence, adaptée à l’affichage plutôt qu’au texte courant.",
+  "paragraphe2": "",
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/fatboy4.png",
+      "alt": "Yo"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/fatboy3.png",
+      "alt": "Mockup"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/fatboy2.png",
+      "alt": "regle"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/fatboy1.png",
+      "alt": "ABC'R"
+    }
+  ],
+  "ordre": 1,
+  "titre_accueil": "Fat boy"
 }
