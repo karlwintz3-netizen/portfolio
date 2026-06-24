@@ -1,11 +1,29 @@
 {
-    "titre":  "Peet",
-    "soustitre":  "Contenu à venir",
-    "categorie":  "edition",
-    "paragraphe1":  "Ce projet est en cours de rédaction. Modifie ce texte depuis l\u0027éditeur (/admin) pour le compléter.",
-    "paragraphe2":  "",
-    "galerie":  [
-
-                ],
-    "ordre":  20
+  "titre": "IDENTITÉ VISUELLE D’UN ALBUM",
+  "soustitre": "Entre douceur introspective & objet éditorial",
+  "categorie": "edition",
+  "paragraphe1": "Création de l’identité visuelle de l’album à demain de Peet, imaginée pour le CD, le vinyle et leurs différents supports de communication. À travers la photographie, la couleur, le motif floral et une approche éditoriale, le projet cherche à retranscrire la sensibilité de l’album et son atmosphère introspective. Pensé dans son ensemble, il donne naissance à un objet sensible, cohérent et fait pour être gardé.",
+  "paragraphe2": "",
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/peet1.png",
+      "alt": "mockup vinyle"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/peet4.png",
+      "alt": "mockup vinyle"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/peet3.png",
+      "alt": "Affiche"
+    }
+  ],
+  "ordre": 2,
+  "titre_accueil": "Peet"
 }
