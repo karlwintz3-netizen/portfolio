@@ -346,6 +346,35 @@ button:focus-visible {
   .sous-postits li:focus-within {
     z-index: 6;
   }
+
+  /* Variante miroir : la grappe sort à gauche du post-it (ex. "Édition")
+     au lieu de la droite. Mêmes décalages, juste inversés via "right". */
+  .sous-postits--gauche {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  .sous-postits--gauche li:nth-child(1) {
+    left: auto;
+    right: 0;
+  }
+
+  .sous-postits--gauche li:nth-child(2) {
+    left: auto;
+    right: 102px;
+  }
+
+  .sous-postits--gauche li:nth-child(3) {
+    left: auto;
+    right: 8px;
+  }
+
+  .sous-postits--gauche li:nth-child(4) {
+    left: auto;
+    right: 100px;
+  }
 }
 
 /* Écrans moyens et mobile : pas assez de liège à droite, la grappe devient
@@ -505,11 +534,6 @@ button:focus-visible {
     width: 44%;
   }
 
-  .galerie__item--logos {
-    width: 64%;
-    margin-bottom: 0.2rem;
-  }
-
   .galerie__item:nth-child(1) {
     transform: rotate(-2deg);
   }
@@ -532,6 +556,11 @@ button:focus-visible {
   .galerie__item:nth-child(5) {
     margin-top: 0.8rem;
     transform: rotate(-3deg);
+  }
+
+  .galerie__item:nth-child(6) {
+    margin-top: 0.3rem;
+    transform: rotate(4deg);
   }
 }
 
@@ -561,6 +590,7 @@ button:focus-visible {
   width: 36px;
   height: 42px;
   z-index: 2;
+  background-image: url("../img/punaise-bordeau/Plan de travail 2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -588,6 +618,10 @@ button:focus-visible {
   rotate: 180deg;
 }
 
+.galerie__item:nth-child(6) .galerie__epingle {
+  background-image: url("../img/punaise-bordeau/Plan de travail 4.png");
+}
+
 .galerie__image {
   position: relative;
   z-index: 1;
@@ -598,37 +632,6 @@ button:focus-visible {
   margin: 0 auto;
   filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
 }
-
-/* Logos avant/après réunis sur une seule feuille à l'horizontale, avec une
-   seule punaise pour tout le bloc. */
-.galerie__papier-logos {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(1rem, 4vw, 2.5rem);
-  aspect-ratio: 2.2 / 1;
-  padding: 1rem clamp(1rem, 5vw, 2.5rem);
-}
-
-.galerie__papier-logos::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url("../img/papier-texte/papier-1.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
-}
-
-.galerie__papier-logos img {
-  max-height: 66%;
-  width: auto;
-  object-fit: contain;
-}
-
 
 /* --- Texte accessible visible uniquement par les lecteurs d'écran --- */
 .visually-hidden {

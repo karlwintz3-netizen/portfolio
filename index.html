@@ -24,6 +24,7 @@
             type="button"
             class="postit postit--bleu"
             id="bouton-identite"
+            data-postit-toggle
             aria-expanded="false"
             aria-controls="sous-rubriques-identite"
           >
@@ -33,28 +34,65 @@
 
           <ul id="sous-rubriques-identite" class="sous-postits" hidden>
             <li>
-              <span class="sous-postit sous-postit--inactif">Umami</span>
+              <a class="sous-postit" href="projet.html?projet=umami">Umami</a>
             </li>
             <li>
-              <span class="sous-postit sous-postit--inactif">Pan</span>
+              <a class="sous-postit" href="projet.html?projet=pan">Pan</a>
             </li>
             <li>
-              <a class="sous-postit" href="projet.html">Refonte Logo</a>
+              <a class="sous-postit" href="projet.html?projet=refonte-logo">Refonte Logo</a>
             </li>
             <li>
-              <span class="sous-postit sous-postit--inactif" aria-label="Excavator">Excava<br />tor</span>
+              <a class="sous-postit" href="projet.html?projet=excavator" aria-label="Excavator">Excava<br />tor</a>
             </li>
           </ul>
         </li>
         <li class="nav-postits__item">
-          <a class="postit postit--rose" href="#">
+          <button
+            type="button"
+            class="postit postit--rose"
+            id="bouton-edition"
+            data-postit-toggle
+            aria-expanded="false"
+            aria-controls="sous-rubriques-edition"
+          >
             <span class="postit__texte">Édition</span>
-          </a>
+            <span class="postit__icone" aria-hidden="true">▾</span>
+          </button>
+
+          <ul id="sous-rubriques-edition" class="sous-postits sous-postits--gauche" hidden>
+            <li>
+              <a class="sous-postit" href="projet.html?projet=peet">Peet</a>
+            </li>
+            <li>
+              <a class="sous-postit" href="projet.html?projet=t2g">T2G</a>
+            </li>
+            <li>
+              <a class="sous-postit" href="projet.html?projet=jardin">Jardin</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-postits__item">
-          <a class="postit postit--vert" href="#">
+          <button
+            type="button"
+            class="postit postit--vert"
+            id="bouton-typo"
+            data-postit-toggle
+            aria-expanded="false"
+            aria-controls="sous-rubriques-typo"
+          >
             <span class="postit__texte">Typographie</span>
-          </a>
+            <span class="postit__icone" aria-hidden="true">▾</span>
+          </button>
+
+          <ul id="sous-rubriques-typo" class="sous-postits" hidden>
+            <li>
+              <a class="sous-postit" href="projet.html?projet=fat-boy">Fat boy</a>
+            </li>
+            <li>
+              <a class="sous-postit" href="projet.html?projet=typo-2">À venir</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
