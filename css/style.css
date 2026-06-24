@@ -1,0 +1,641 @@
+/* =========================================================
+   Portfolio "tableau en liège" — feuille de styles
+   ========================================================= */
+
+/* --- Polices --- */
+@font-face {
+  font-family: "BW Fusiona";
+  src: url("../font/BwFusionaDEMO-57Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gothic Italique";
+  src: url("../font/GOTHICI.TTF") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yorkten";
+  src: url("../font/Yorkten-NorReg.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Variables : charte graphique extraite des maquettes --- */
+:root {
+  --couleur-rose: #e49090;
+  --couleur-vert: #ace48f;
+  --couleur-bleu: #90cce4;
+  --couleur-violet: #c58de3;
+  --couleur-liege: #dfb27e;
+  --couleur-papier: #f3ede2;
+  --couleur-encre: #201708;
+  --couleur-encre-claire: #3a2c16;
+  --couleur-focus: #1a1aff;
+
+  --font-titre: "BW Fusiona", "Arial Black", sans-serif;
+  --font-soustitre: "Gothic Italique", "Georgia", serif;
+  --font-texte: "Yorkten", "Segoe UI", sans-serif;
+
+  --rayon-papier: 4px;
+}
+
+/* --- Reset minimal --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-texte);
+  color: var(--couleur-encre);
+  background-color: var(--couleur-liege);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* --- Lien d'évitement (accessibilité clavier) --- */
+.lien-evitement {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--couleur-papier);
+  color: var(--couleur-encre);
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  font-family: var(--font-texte);
+}
+
+.lien-evitement:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* --- Focus visible cohérent partout --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--couleur-focus);
+  outline-offset: 3px;
+}
+
+/* --- Lien de retour (pas de bandeau, posé directement sur le liège) --- */
+.retour {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 1rem 0;
+  font-family: var(--font-texte);
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--couleur-encre);
+  background-color: rgba(243, 237, 226, 0.85);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.15s ease;
+}
+
+.retour:hover,
+.retour:focus-visible {
+  background-color: var(--couleur-papier);
+}
+
+.retour__fleche {
+  font-size: 1.2rem;
+}
+
+/* --- Tableau en liège --- */
+.tableau-liege {
+  background-image: url("../img/fond.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Page d'accueil : pas de scroll, les post-it sont centrés dans l'écran */
+.tableau-liege--accueil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Grille de navigation en post-it --- */
+.nav-postits {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 6vw, 4rem);
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .nav-postits {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+.nav-postits__item {
+  position: relative;
+  /* Largeur explicite (et non un pourcentage/auto) : dans un contexte flex
+     (la page d'accueil centre la grille avec display:flex), un bloc en
+     largeur "auto" se met sinon à épouser la taille de son contenu (donc du
+     texte), ce qui rendait chaque post-it d'une taille différente. */
+  width: clamp(150px, 22vw, 260px);
+  margin: 0 auto;
+}
+
+.postit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: var(--couleur-encre);
+  font-family: var(--font-titre);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  text-align: center;
+  padding: 2rem 1.75rem;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.postit:hover,
+.postit:focus-visible {
+  transform: scale(1.04) rotate(0deg) !important;
+  z-index: 2;
+}
+
+.postit__texte {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.15;
+}
+
+.postit--rose {
+  background-image: url("../img/post-it-titre/post-it-1.png");
+  transform: rotate(-3deg);
+}
+
+.postit--bleu {
+  background-image: url("../img/post-it-titre/post-it-3.png");
+  transform: rotate(2deg);
+}
+
+.postit--violet {
+  background-image: url("../img/post-it-titre/post-it-4.png");
+  transform: rotate(-2deg);
+}
+
+.postit--vert {
+  background-image: url("../img/post-it-titre/post-it-2.png");
+  transform: rotate(3deg);
+}
+
+.postit__icone {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.9rem;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.postit[aria-expanded="true"] .postit__icone {
+  transform: rotate(180deg);
+}
+
+/* --- Sous-rubriques : sortent en grappe désordonnée à droite du post-it ---
+   Apparition en douceur (fondu + léger zoom) plutôt qu'un affichage brusque. */
+.sous-postits {
+  list-style: none;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sous-postits[hidden] {
+  display: none;
+}
+
+.sous-postits.est-ouvert {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sous-postit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  background-image: url("../img/post-it-titre/post-it-3.png");
+  background-size: 100% 100%;
+  font-family: var(--font-titre);
+  font-size: 0.85rem;
+  color: var(--couleur-encre);
+  text-decoration: none;
+  padding: 0.6rem;
+  line-height: 1.1;
+  transition: transform 0.2s ease;
+}
+
+.sous-postit:hover,
+.sous-postit:focus-visible {
+  transform: scale(1.08) !important;
+  z-index: 5;
+}
+
+.sous-postit--inactif {
+  cursor: default;
+  opacity: 0.75;
+}
+
+/* Grands écrans : la grappe sort réellement à droite du post-it, sans le
+   chevaucher. Le seuil (1300px) est calculé pour garantir qu'il reste assez
+   de liège visible à droite de la grille pour accueillir la grappe (plus
+   grande désormais), quelle que soit la largeur de la fenêtre au-delà de ce
+   seuil. */
+@media (min-width: 1300px) {
+  .sous-postits {
+    position: absolute;
+    top: 4px;
+    left: 100%;
+    margin-left: 14px;
+    width: 198px;
+    height: 198px;
+    z-index: 3;
+  }
+
+  .sous-postits li {
+    position: absolute;
+  }
+
+  .sous-postit {
+    width: 92px;
+    aspect-ratio: 1 / 1;
+    font-size: 0.9rem;
+  }
+
+  .sous-postits li:nth-child(1) {
+    top: -8px;
+    left: 0;
+    transform: rotate(-8deg);
+  }
+
+  .sous-postits li:nth-child(2) {
+    top: 6px;
+    left: 102px;
+    transform: rotate(11deg);
+  }
+
+  .sous-postits li:nth-child(3) {
+    top: 96px;
+    left: 8px;
+    transform: rotate(5deg);
+  }
+
+  .sous-postits li:nth-child(4) {
+    top: 104px;
+    left: 100px;
+    transform: rotate(-9deg);
+  }
+
+  .sous-postits li:hover,
+  .sous-postits li:focus-within {
+    z-index: 6;
+  }
+}
+
+/* Écrans moyens et mobile : pas assez de liège à droite, la grappe devient
+   une petite grille bien rangée sous le post-it (toujours sans le
+   chevaucher). */
+@media (max-width: 1299px) {
+  .sous-postits {
+    position: static;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .sous-postit {
+    aspect-ratio: 1 / 1;
+    width: auto;
+    transform: none !important;
+  }
+}
+
+/* --- Page projet --- */
+/* Le texte reste premier dans le DOM (lu en premier par les lecteurs
+   d'écran) mais s'affiche visuellement à droite sur grand écran, grâce à
+   des zones de grille nommées (plus fiable qu'un simple "order" qui s'est
+   montré incohérent sur certaines largeurs). */
+.projet {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.1fr) minmax(340px, 1.3fr);
+  grid-template-areas: "texte galerie";
+  gap: clamp(1rem, 3vw, 1.5rem);
+  max-width: 1300px;
+  margin: 0.25rem auto 0;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.feuille {
+  grid-area: texte;
+}
+
+.projet > section {
+  grid-area: galerie;
+}
+
+@media (max-width: 800px) {
+  .projet {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "texte"
+      "galerie";
+  }
+
+  /* Sur téléphone, la marge fixe (en rem) du papier devient trop large par
+     rapport à la largeur de l'écran et pousse le texte à déborder : on la
+     réduit pour cette gamme d'écrans. */
+  .feuille {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+}
+
+.feuille {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.75rem, 4vw, 2.5rem) clamp(2.5rem, 7vw, 4.5rem) clamp(3rem, 6vw, 4rem);
+}
+
+/* L'ombre est posée sur un pseudo-élément qui ne contient que le papier (et
+   pas le texte) : avec "box-shadow" directement sur .feuille, l'ombre
+   suivait le rectangle complet de la boîte plutôt que les bords irréguliers
+   du papier, ce qui créait un rectangle fantôme visible derrière. En
+   utilisant "filter: drop-shadow", l'ombre suit la vraie silhouette
+   (transparence comprise) de l'image. */
+.feuille::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../img/papier-texte/papier-1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
+}
+
+.feuille__epingle {
+  position: absolute;
+  top: -2.8px;
+  left: 50%;
+  translate: -50% 0;
+  width: 36px;
+  height: 42px;
+  z-index: 2;
+  background-image: url("../img/punaise-bordeau/Plan de travail 9.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feuille__titre {
+  font-family: var(--font-titre);
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.feuille__soustitre {
+  font-family: var(--font-soustitre);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.feuille__texte {
+  font-family: var(--font-texte);
+  font-size: 0.92rem;
+  max-width: 38em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.feuille__texte + .feuille__texte {
+  margin-top: 0.75rem;
+}
+
+/* --- Galerie d'images punaisées : posées directement sur le liège, sans
+   cadre, juste une punaise. Chaque punaise est une image différente pour
+   éviter la répétition. Disposition éparpillée façon tableau de liège
+   (tailles, rotations et décalages variés), comme sur la maquette. --- */
+.galerie {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.galerie__item {
+  position: relative;
+  width: 78%;
+}
+
+/* Sur grand écran, la galerie s'étale sur toute sa largeur (deux images par
+   rangée) plutôt qu'en une seule cascade verticale : on garde la page
+   compacte (sans scroll) tout en restant éparpillée/désordonnée. */
+@media (min-width: 800px) {
+  .galerie {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 4%;
+  }
+
+  .galerie__item {
+    width: 44%;
+  }
+
+  .galerie__item--logos {
+    width: 64%;
+    margin-bottom: 0.2rem;
+  }
+
+  .galerie__item:nth-child(1) {
+    transform: rotate(-2deg);
+  }
+
+  .galerie__item:nth-child(2) {
+    margin-top: 0;
+    transform: rotate(3deg);
+  }
+
+  .galerie__item:nth-child(3) {
+    margin-top: 0.6rem;
+    transform: rotate(-4deg);
+  }
+
+  .galerie__item:nth-child(4) {
+    margin-top: 0.1rem;
+    transform: rotate(5deg);
+  }
+
+  .galerie__item:nth-child(5) {
+    margin-top: 0.8rem;
+    transform: rotate(-3deg);
+  }
+}
+
+@media (max-width: 799px) {
+  .galerie__item {
+    margin: 0 auto 1.5rem;
+  }
+
+  .galerie__item:nth-child(odd) {
+    transform: rotate(-2deg);
+  }
+
+  .galerie__item:nth-child(even) {
+    transform: rotate(2deg);
+  }
+}
+
+/* Taille et recadrage identiques pour toutes les punaises (sinon, des
+   images sources avec des proportions différentes paraissent plus petites
+   ou plus grosses entre elles). On évite aussi les variantes "boule sans
+   tige visible" qui ne donnent pas l'impression de piquer dans le papier. */
+.galerie__epingle {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  translate: -50% 0;
+  width: 36px;
+  height: 42px;
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.galerie__item:nth-child(1) .galerie__epingle {
+  background-image: url("../img/punaise-bordeau/Plan de travail 2.png");
+}
+
+.galerie__item:nth-child(2) .galerie__epingle {
+  background-image: url("../img/punaise-bordeau/Plan de travail 11.png");
+}
+
+.galerie__item:nth-child(3) .galerie__epingle {
+  background-image: url("../img/punaise-bordeau/Plan de travail 7.png");
+}
+
+.galerie__item:nth-child(4) .galerie__epingle {
+  background-image: url("../img/punaise-bordeau/Plan de travail 14.png");
+  rotate: 180deg;
+}
+
+.galerie__item:nth-child(5) .galerie__epingle {
+  background-image: url("../img/punaise-bordeau/Plan de travail 15.png");
+  rotate: 180deg;
+}
+
+.galerie__image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-height: 195px;
+  object-fit: contain;
+  margin: 0 auto;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
+}
+
+/* Logos avant/après réunis sur une seule feuille à l'horizontale, avec une
+   seule punaise pour tout le bloc. */
+.galerie__papier-logos {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 2.5rem);
+  aspect-ratio: 2.2 / 1;
+  padding: 1rem clamp(1rem, 5vw, 2.5rem);
+}
+
+.galerie__papier-logos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../img/papier-texte/papier-1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.35));
+}
+
+.galerie__papier-logos img {
+  max-height: 66%;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* --- Texte accessible visible uniquement par les lecteurs d'écran --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}

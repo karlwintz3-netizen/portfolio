@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Accueil</title>
+  <meta name="description" content="Portfolio de designer graphique : identité de marque, édition, typographie." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
+
+  <main id="contenu-principal" class="tableau-liege tableau-liege--accueil">
+    <nav aria-label="Rubriques du portfolio">
+      <ul class="nav-postits">
+        <li class="nav-postits__item">
+          <a class="postit postit--violet" href="#">
+            <span class="postit__texte">À propos</span>
+          </a>
+        </li>
+        <li class="nav-postits__item">
+          <button
+            type="button"
+            class="postit postit--bleu"
+            id="bouton-identite"
+            aria-expanded="false"
+            aria-controls="sous-rubriques-identite"
+          >
+            <span class="postit__texte">Identité de marque</span>
+            <span class="postit__icone" aria-hidden="true">▾</span>
+          </button>
+
+          <ul id="sous-rubriques-identite" class="sous-postits" hidden>
+            <li>
+              <span class="sous-postit sous-postit--inactif">Umami</span>
+            </li>
+            <li>
+              <span class="sous-postit sous-postit--inactif">Pan</span>
+            </li>
+            <li>
+              <a class="sous-postit" href="projet.html">Refonte Logo</a>
+            </li>
+            <li>
+              <span class="sous-postit sous-postit--inactif" aria-label="Excavator">Excava<br />tor</span>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-postits__item">
+          <a class="postit postit--rose" href="#">
+            <span class="postit__texte">Édition</span>
+          </a>
+        </li>
+        <li class="nav-postits__item">
+          <a class="postit postit--vert" href="#">
+            <span class="postit__texte">Typographie</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
