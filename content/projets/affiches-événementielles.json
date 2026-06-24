@@ -1,0 +1,35 @@
+{
+  "ordre": 10,
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "grande",
+      "image": "/img/uploads/jardin3.png",
+      "alt": "Mockup affiche",
+      "image2": ""
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/jardin2.png",
+      "alt": "Mockup deux affiches"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/jardin1.png",
+      "alt": "Règle affiche"
+    },
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/jardin4.png",
+      "alt": "Mockup affiche"
+    }
+  ],
+  "titre": "AFFICHES ÉVÉNEMENTIELLES",
+  "soustitre": "Déclinaisons d’une grille graphique pour “Rendez-vous aux jardins”",
+  "titre_accueil": "Jardins",
+  "categorie": "edition",
+  "paragraphe1": "Création d’une grille graphique pour l’événement\n“Rendez-vous aux jardins”, pensée comme une base\nde construction déclinable sur plusieurs affiches. À\npartir d’un motif inspiré de l’univers végétal, le projet\ndéveloppe un système visuel cohérent, rythmé et\nfacilement adaptable."
+}
