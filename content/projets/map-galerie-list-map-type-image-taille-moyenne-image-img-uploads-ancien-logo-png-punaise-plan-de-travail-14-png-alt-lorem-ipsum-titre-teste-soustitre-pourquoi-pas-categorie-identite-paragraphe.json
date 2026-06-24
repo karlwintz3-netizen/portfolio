@@ -2,9 +2,9 @@
   "galerie": [
     {
       "type": "image",
-      "taille": "moyenne",
+      "taille": "grande",
       "image": "/img/uploads/ancien-logo.png",
-      "punaise": "Plan de travail 14.png",
+      "punaise": "Plan de travail 7.png",
       "alt": "lorem ipsum"
     }
   ],
