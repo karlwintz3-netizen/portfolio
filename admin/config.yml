@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "projet_refonte_logo"
+    label: "Projet : Refonte Logo"
+    files:
+      - label: "Texte du projet"
+        name: "refonte_logo"
+        file: "content/projet-refonte-logo.json"
+        fields:
+          - { label: "Titre", name: "titre", widget: "string" }
+          - { label: "Sous-titre", name: "soustitre", widget: "string" }
+          - { label: "Premier paragraphe", name: "paragraphe1", widget: "text" }
+          - { label: "Deuxième paragraphe", name: "paragraphe2", widget: "text" }
