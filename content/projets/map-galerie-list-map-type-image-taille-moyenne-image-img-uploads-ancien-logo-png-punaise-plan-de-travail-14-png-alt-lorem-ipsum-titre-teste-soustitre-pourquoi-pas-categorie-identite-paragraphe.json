@@ -1,0 +1,15 @@
+{
+  "galerie": [
+    {
+      "type": "image",
+      "taille": "moyenne",
+      "image": "/img/uploads/ancien-logo.png",
+      "punaise": "Plan de travail 14.png",
+      "alt": "lorem ipsum"
+    }
+  ],
+  "titre": "teste",
+  "soustitre": "Pourquoi pas",
+  "categorie": "identite",
+  "paragraphe1": "lorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\nlorem ipsum\n"
+}
